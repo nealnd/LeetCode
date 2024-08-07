@@ -56,5 +56,6 @@ public class Exercise94_2 {
         List<Integer> list = solution.inorderTraversal(node1);
         for (Integer item : list)
             System.out.println(item);
+            
     }
 }
