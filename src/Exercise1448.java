@@ -1,5 +1,5 @@
 public class Exercise1448 {
-    
+
     public class TreeNode {
         int val;
         TreeNode left;
@@ -18,31 +18,31 @@ public class Exercise1448 {
             this.right = right;
         }
     }
-         
+
     class Solution {
         public int goodNodes(TreeNode root) {
             if (root == null)
                 return 0;
             int count = 0;
             int max = root.val;
-          count=goodNodes(root, count, max);
+            count = goodNodes(root, count, max);
             return count;
         }
 
         public int goodNodes(TreeNode node, int count, int max) {
             if (node == null)
-                return count ;
+                return count;
             if (node != null && node.val >= max) {
                 count++;
                 max = node.val;
 
             }
-            count=goodNodes(node.left, count, max);
+            count = goodNodes(node.left, count, max);
             count = goodNodes(node.right, count, max);
             return count;
         }
     }
-    
+
     public static void main(String[] args) {
         Exercise1448 exercise = new Exercise1448();
         Solution solution = exercise.new Solution();
