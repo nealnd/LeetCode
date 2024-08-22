@@ -1,11 +1,10 @@
 package HeapAndPriorityQueue;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Iterator;
+
+
 import java.util.PriorityQueue;
-import java.util.TreeSet;
+
 
 public class Exercise2542 {
     class Solution {
