@@ -17,4 +17,11 @@ public class Exercise309 {
             return sell[prices.length - 1];
         }
     }
+
+    public static void main(String[] args) {
+        Exercise309 exercise = new Exercise309();
+        Solution solution = exercise.new Solution();
+        int[] prices = new int[] { 7,1,5,3,6,4 };
+        System.out.println(solution.maxProfit(prices));
+    }
 }
