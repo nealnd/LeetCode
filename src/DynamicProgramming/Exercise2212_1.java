@@ -1,6 +1,6 @@
 package DynamicProgramming;
 
-public class Exercise2212 {
+public class Exercise2212_1 {
     class Solution {
         public int[] maximumBobPoints(int numArrows, int[] aliceArrows) {
             int[][] win = new int[aliceArrows.length][numArrows + 1];
@@ -40,7 +40,7 @@ public class Exercise2212 {
     }
 
     public static void main(String[] args) {
-        Exercise2212 exercise = new Exercise2212();
+        Exercise2212_1 exercise = new Exercise2212_1();
         Solution solution = exercise.new Solution();
         int[] aliceArrows = new int[] { 1, 1, 0, 1, 0, 0, 2, 1, 0, 1, 2, 0 };
 
