@@ -19,6 +19,6 @@ int main()
 {
     Solution s;
     vector<int> nums {4, 1, 2, 1, 2};
-    cout << s.singleNumber(nums) << endl; 
+    cout << s.singleNumber(nums) << endl; // Output: 4
     return 0;
 }
