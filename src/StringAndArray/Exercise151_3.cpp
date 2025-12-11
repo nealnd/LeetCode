@@ -3,39 +3,38 @@
 #include <algorithm>
 using namespace std;
 
-
 class Solution
 {
 public:
     string reverseWords(string s)
     {
-
         reverse(s.begin(), s.end());
-        int i = 0, k = 0, n = s.size();
+        int n = s.size();
+        int left = 0;
+        int right = 0;
+        int i = 0;
         while (i < n)
         {
             while (i < n && s[i] == ' ')
                 i++;
-            if (i < n && k > 0)
-            {
-                s[k] = ' ';
-                k++;
-            }
-            int start_index = k;
-
+            if (i == n)
+                break; // to stop index going out of bounds
             while (i < n && s[i] != ' ')
             {
-                s[k++] = s[i++];
+                s[right++] = s[i++];
             }
-
-            reverse(s.begin() + start_index, s.begin() + k);
+            reverse(s.begin() + left, s.begin() + right);
+            s[right++] = ' ';
+            left = right;
+            i++;
         }
-        s.resize(k);
+        s.resize(right - 1);
         return s;
     }
 };
 
-int main(){
+int main()
+{
     string s = "the sky is blue";
     Solution sl;
     cout << sl.reverseWords(s);
