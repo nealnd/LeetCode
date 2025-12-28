@@ -42,7 +42,7 @@ public:
                 }
                 else if (temp->right == curr)
                 {
-                    temp->right = NULL;
+                    temp->right = nullptr;
                     count++;
                     if (count == k)
                         ans = curr->val;
@@ -62,5 +62,5 @@ int main()
     TreeNode a2(3);
     TreeNode a1(7, &a2, &a3);
     Solution sl;
-    cout << sl.kthSmallest(&a1, 2);
+    cout << sl.kthSmallest(&a1, 3);
 }
